@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>After Hours Dev Studio</title>
+  <meta name="description" content="iPhone games and handy little apps, made after hours by a solo indie dev. All free on the App Store.">
+  <meta property="og:title" content="After Hours Dev Studio">
+  <meta property="og:description" content="iPhone games and handy little apps, made after hours. All free on the App Store.">
+  <meta property="og:image" content="avatar.png">
+  <link rel="icon" href="avatar.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <style>
+    :root { --bg1:#121028; --bg2:#2a1d4d; --ink:#f6f2ea; --muted:#b9b3cc; --card:rgba(255,255,255,.07); --line:rgba(255,255,255,.12); }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; color:var(--ink); background:linear-gradient(180deg,var(--bg1),var(--bg2)) fixed;
+           font:16px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+    main { max-width:520px; margin:0 auto; padding:40px 16px 56px; }
+    header { text-align:center; margin-bottom:28px; }
+    header img { width:96px; height:96px; border-radius:50%; box-shadow:0 8px 30px rgba(0,0,0,.4); }
+    h1 { font-size:24px; margin:14px 0 4px; letter-spacing:-.01em; }
+    header p { margin:0; color:var(--muted); }
+    h2 { font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:28px 4px 10px; }
+    .list { display:grid; gap:10px; }
+    .card { display:flex; align-items:center; gap:14px; padding:12px; border-radius:18px; background:var(--card);
+            border:1px solid var(--line); color:inherit; text-decoration:none; transition:transform .15s, background .15s; }
+    .card:hover, .card:focus-visible { background:rgba(255,255,255,.12); transform:translateY(-1px); }
+    .card img { width:64px; height:64px; border-radius:15px; flex:none; }
+    .meta { display:flex; flex-direction:column; min-width:0; flex:1; }
+    .meta strong { font-size:16px; }
+    .meta small { color:var(--muted); font-size:14px; }
+    .get { flex:none; padding:7px 16px; border-radius:999px; background:var(--accent); color:#fff; font-weight:700; font-size:14px; }
+    footer { text-align:center; color:var(--muted); font-size:13px; margin-top:36px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="avatar.png" alt="After Hours Dev Studio">
+      <h1>After Hours Dev Studio</h1>
+      <p>iPhone games &amp; handy little apps, made after hours.<br>All free on the App Store.</p>
+    </header>
+    <h2>Games</h2>
+    <div class="list">
+      <a class="card" href="https://apps.apple.com/us/app/id6797896315?ct=afterhours_bio" style="--accent:#E8893A">
+        <img src="icons/pupdoku.png" alt="" width="64" height="64">
+        <span class="meta"><strong>Pupduko: Puppy Puzzles</strong><small>Cozy logic puzzles. Find the hidden puppies.</small></span>
+        <span class="get">Get</span>
+      </a>
+      <a class="card" href="https://apps.apple.com/us/app/id6784340038?ct=afterhours_bio" style="--accent:#9B5CF6">
+        <img src="icons/cosmica.png" alt="" width="64" height="64">
+        <span class="meta"><strong>Cosmica: Idle Universe</strong><small>An idle galaxy that plays itself.</small></span>
+        <span class="get">Get</span>
+      </a>
+    </div>
+    <h2>Local guides · The Woodlands, TX</h2>
+    <div class="list">
+      <a class="card" href="https://apps.apple.com/us/app/id6773501518?ct=afterhours_bio" style="--accent:#6A5AE0">
+        <img src="icons/stier-eats.png" alt="" width="64" height="64">
+        <span class="meta"><strong>S-Tier Eats</strong><small>Restaurants around The Woodlands, ranked S to F.</small></span>
+        <span class="get">Get</span>
+      </a>
+      <a class="card" href="https://apps.apple.com/us/app/id6785576912?ct=afterhours_bio" style="--accent:#2F6B45">
+        <img src="icons/woodlands-trails.png" alt="" width="64" height="64">
+        <span class="meta"><strong>The Woodlands Trail Guide</strong><small>Plan and navigate The Woodlands pathways.</small></span>
+        <span class="get">Get</span>
+      </a>
+      <a class="card" href="https://apps.apple.com/us/app/id6773332173?ct=afterhours_bio" style="--accent:#1F6E78">
+        <img src="icons/woodlands-fishing.png" alt="" width="64" height="64">
+        <span class="meta"><strong>The Woodlands Fishing Guide</strong><small>81 fishing spots with live conditions.</small></span>
+        <span class="get">Get</span>
+      </a>
+    </div>
+    <footer>@afterhoursdevstudio on TikTok &amp; Instagram</footer>
+  </main>
+</body>
+</html>

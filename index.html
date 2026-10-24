@@ -31,6 +31,13 @@
     .meta small { color:var(--muted); font-size:14px; }
     .get { flex:none; padding:7px 16px; border-radius:999px; background:var(--accent); color:#fff; font-weight:700; font-size:14px; }
     footer { text-align:center; color:var(--muted); font-size:13px; margin-top:36px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+    .tile { position:relative; display:block; aspect-ratio:9/16; border-radius:12px; overflow:hidden; background:var(--card); }
+    .tile > img { width:100%; height:100%; object-fit:cover; display:block; }
+    .tag { position:absolute; left:6px; right:6px; bottom:6px; display:flex; align-items:center; gap:5px; padding:4px 7px;
+           border-radius:999px; background:rgba(0,0,0,.6); color:#fff; font-size:11px; font-weight:600;
+           white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .tag img { width:16px; height:16px; border-radius:4px; flex:none; }
   </style>
 </head>
 <body>
@@ -40,6 +47,29 @@
       <h1>After Hours Dev Studio</h1>
       <p>iPhone games &amp; handy little apps, made after hours.<br>All free on the App Store.</p>
     </header>
+    <h2>From the feed · tap a post to get the app</h2>
+    <div class="grid">
+      <a class="tile" href="https://apps.apple.com/us/app/id6784340038?ct=afterhours_feed">
+        <img src="feed/2026-10-24-1130-afterhoursdevstudio-cosmica.jpg" alt="" loading="lazy">
+        <span class="tag"><img src="icons/cosmica.png" alt="">Cosmica</span>
+      </a>
+      <a class="tile" href="https://apps.apple.com/us/app/id6785576912?ct=afterhours_feed">
+        <img src="feed/2026-10-23-1900-afterhoursdevstudio-woodlands-trails.jpg" alt="" loading="lazy">
+        <span class="tag"><img src="icons/woodlands-trails.png" alt="">The Woodlands Trail Guide</span>
+      </a>
+      <a class="tile" href="https://apps.apple.com/us/app/id6773501518?ct=afterhours_feed">
+        <img src="feed/2026-10-23-1130-afterhoursdevstudio-stier-eats.jpg" alt="" loading="lazy">
+        <span class="tag"><img src="icons/stier-eats.png" alt="">S-Tier Eats</span>
+      </a>
+      <a class="tile" href="https://apps.apple.com/us/app/id6797896315?ct=afterhours_feed">
+        <img src="feed/2026-10-22-1900-afterhoursdevstudio-pupdoku.jpg" alt="" loading="lazy">
+        <span class="tag"><img src="icons/pupdoku.png" alt="">Pupduko</span>
+      </a>
+      <a class="tile" href="https://apps.apple.com/us/app/id6784340038?ct=afterhours_feed">
+        <img src="feed/2026-10-22-1130-afterhoursdevstudio-cosmica.jpg" alt="" loading="lazy">
+        <span class="tag"><img src="icons/cosmica.png" alt="">Cosmica</span>
+      </a>
+    </div>
     <h2>Games</h2>
     <div class="list">
       <a class="card" href="https://apps.apple.com/us/app/id6797896315?ct=afterhours_bio" style="--accent:#E8893A">

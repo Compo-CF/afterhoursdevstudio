@@ -87,6 +87,11 @@
     .app-name { text-decoration:none; }
     .stores { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:auto; padding-top:2px; }
     .stores a { display:block; line-height:0; }
+    .stores a.beta { display:inline-flex; align-items:center; height:40px; padding:0 14px; border-radius:7px; border:1px dashed #a6a6a6;
+                      color:#fff; text-decoration:none; line-height:1; background:rgba(0,0,0,.35); }
+    .beta span { display:flex; flex-direction:column; gap:3px; font-size:15px; font-weight:600; }
+    .beta small { font-size:9px; font-weight:600; letter-spacing:.08em; color:#3ddc84; }
+    .beta:hover { background:rgba(0,0,0,.55); }
     .brand { white-space:nowrap; }
     .grid { display:grid; grid-template-columns:repeat(6,1fr); gap:12px; }
     .tile { position:relative; display:block; aspect-ratio:9/16; border-radius:14px; overflow:hidden; background:var(--panel); border:1px solid var(--line); }
@@ -190,6 +195,7 @@
             </div>
             <div class="stores">
               <a href="https://apps.apple.com/us/app/id6832097718?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Neatly: Cozy Organizing on the App Store" width="120" height="40"></a>
+              <a class="beta" href="mailto:hello@afterhoursdevstudio.com?subject=Android%20beta%3A%20Neatly%3A%20Cozy%20Organizing&body=Please%20add%20me%20as%20an%20Android%20tester.%20My%20Google%20Play%20email%20is%3A%20"><span><small>ANDROID BETA</small>Request an invite</span></a>
             </div>
           </div>
           <div class="card" style="--accent:#78375D">
@@ -281,6 +287,7 @@
             </div>
             <div class="stores">
               <a href="https://apps.apple.com/us/app/id6785576912?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download The Woodlands Trail Guide on the App Store" width="120" height="40"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.compofelice.woodlandstrailguide_flutter&referrer=utm_source%3Dafterhoursdevstudio"><img class="badge" src="googleplay-badge.png" alt="Get The Woodlands Trail Guide on Google Play" width="134" height="40"></a>
             </div>
           </div>
           <div class="card" style="--accent:#1F6E78">

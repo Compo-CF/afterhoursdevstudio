@@ -74,8 +74,9 @@
     .group-head h3 { margin:0; font-size:20px; }
     .group-head p { margin:0; color:var(--muted); font-size:15px; }
     .cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:16px; }
-    .card { display:flex; gap:18px; align-items:flex-start; padding:20px; border-radius:var(--radius); background:var(--panel);
-             border:1px solid var(--line); text-decoration:none; transition:transform .15s, border-color .15s, background .15s; }
+    .card { display:flex; flex-direction:column; gap:18px; padding:20px; border-radius:var(--radius); background:var(--panel);
+             border:1px solid var(--line); transition:transform .15s, border-color .15s, background .15s; }
+    .card-top { display:flex; gap:16px; align-items:flex-start; }
     .card:hover, .card:focus-visible { transform:translateY(-2px); border-color:var(--accent); background:#241e4c; }
     .app-icon { width:76px; height:76px; border-radius:22%; flex:none; box-shadow:0 6px 18px rgba(0,0,0,.35); }
     .card-body { display:flex; flex-direction:column; gap:6px; min-width:0; }
@@ -84,7 +85,8 @@
     /* Official store badges, always shown at the same height (Apple + Google badge guidelines). */
     .badge { height:40px; width:auto; display:block; }
     .app-name { text-decoration:none; }
-    .stores { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+    .stores { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:auto; padding-top:2px; }
+    .stores a { display:block; line-height:0; }
     .brand { white-space:nowrap; }
     .grid { display:grid; grid-template-columns:repeat(6,1fr); gap:12px; }
     .tile { position:relative; display:block; aspect-ratio:9/16; border-radius:14px; overflow:hidden; background:var(--panel); border:1px solid var(--line); }
@@ -179,65 +181,77 @@
         <div class="group-head"><h3>Games</h3><p>Cozy, idle and puzzle games.</p></div>
         <div class="cards">
           <div class="card" style="--accent:#9C6D4B">
-            <a href="https://apps.apple.com/us/app/id6832097718?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/neatly.png" alt="" width="76" height="76" loading="lazy"></a>
-            <span class="card-body">
-              <a class="app-name" href="https://apps.apple.com/us/app/id6832097718?ct=afterhours_site"><strong>Neatly: Cozy Organizing</strong></a>
-              <span class="tagline">Cozy organizing puzzles. Put every little thing in its place.</span>
-              <span class="stores">
-                <a href="https://apps.apple.com/us/app/id6832097718?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Neatly: Cozy Organizing on the App Store" width="120" height="40"></a>
+            <div class="card-top">
+              <a href="https://apps.apple.com/us/app/id6832097718?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/neatly.png" alt="" width="76" height="76" loading="lazy"></a>
+              <span class="card-body">
+                <a class="app-name" href="https://apps.apple.com/us/app/id6832097718?ct=afterhours_site"><strong>Neatly: Cozy Organizing</strong></a>
+                <span class="tagline">Cozy organizing puzzles. Put every little thing in its place.</span>
               </span>
-            </span>
+            </div>
+            <div class="stores">
+              <a href="https://apps.apple.com/us/app/id6832097718?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Neatly: Cozy Organizing on the App Store" width="120" height="40"></a>
+            </div>
           </div>
           <div class="card" style="--accent:#78375D">
-            <a href="https://apps.apple.com/us/app/id6830660705?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/ghostline.png" alt="" width="76" height="76" loading="lazy"></a>
-            <span class="card-body">
-              <a class="app-name" href="https://apps.apple.com/us/app/id6830660705?ct=afterhours_site"><strong>Ghostline: Idle Racer</strong></a>
-              <span class="tagline">Idle retro racer. Chase your own ghost lap.</span>
-              <span class="stores">
-                <a href="https://apps.apple.com/us/app/id6830660705?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Ghostline: Idle Racer on the App Store" width="120" height="40"></a>
+            <div class="card-top">
+              <a href="https://apps.apple.com/us/app/id6830660705?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/ghostline.png" alt="" width="76" height="76" loading="lazy"></a>
+              <span class="card-body">
+                <a class="app-name" href="https://apps.apple.com/us/app/id6830660705?ct=afterhours_site"><strong>Ghostline: Idle Racer</strong></a>
+                <span class="tagline">Idle retro racer. Chase your own ghost lap.</span>
               </span>
-            </span>
+            </div>
+            <div class="stores">
+              <a href="https://apps.apple.com/us/app/id6830660705?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Ghostline: Idle Racer on the App Store" width="120" height="40"></a>
+            </div>
           </div>
           <div class="card" style="--accent:#70416E">
-            <a href="https://apps.apple.com/us/app/id6821057970?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/alchemica.png" alt="" width="76" height="76" loading="lazy"></a>
-            <span class="card-body">
-              <a class="app-name" href="https://apps.apple.com/us/app/id6821057970?ct=afterhours_site"><strong>Alchemica: Roguelite</strong></a>
-              <span class="tagline">Alchemy roguelite deckbuilder. Brew, combine, survive.</span>
-              <span class="stores">
-                <a href="https://apps.apple.com/us/app/id6821057970?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Alchemica: Roguelite on the App Store" width="120" height="40"></a>
+            <div class="card-top">
+              <a href="https://apps.apple.com/us/app/id6821057970?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/alchemica.png" alt="" width="76" height="76" loading="lazy"></a>
+              <span class="card-body">
+                <a class="app-name" href="https://apps.apple.com/us/app/id6821057970?ct=afterhours_site"><strong>Alchemica: Roguelite</strong></a>
+                <span class="tagline">Alchemy roguelite deckbuilder. Brew, combine, survive.</span>
               </span>
-            </span>
+            </div>
+            <div class="stores">
+              <a href="https://apps.apple.com/us/app/id6821057970?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Alchemica: Roguelite on the App Store" width="120" height="40"></a>
+            </div>
           </div>
           <div class="card" style="--accent:#E8893A">
-            <a href="https://apps.apple.com/us/app/id6797896315?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/pupdoku.png" alt="" width="76" height="76" loading="lazy"></a>
-            <span class="card-body">
-              <a class="app-name" href="https://apps.apple.com/us/app/id6797896315?ct=afterhours_site"><strong>Pupdoku: Puppy Puzzles</strong></a>
-              <span class="tagline">Cozy logic puzzles. Find the hidden puppies.</span>
-              <span class="stores">
-                <a href="https://apps.apple.com/us/app/id6797896315?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Pupdoku: Puppy Puzzles on the App Store" width="120" height="40"></a>
+            <div class="card-top">
+              <a href="https://apps.apple.com/us/app/id6797896315?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/pupdoku.png" alt="" width="76" height="76" loading="lazy"></a>
+              <span class="card-body">
+                <a class="app-name" href="https://apps.apple.com/us/app/id6797896315?ct=afterhours_site"><strong>Pupdoku: Puppy Puzzles</strong></a>
+                <span class="tagline">Cozy logic puzzles. Find the hidden puppies.</span>
               </span>
-            </span>
+            </div>
+            <div class="stores">
+              <a href="https://apps.apple.com/us/app/id6797896315?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Pupdoku: Puppy Puzzles on the App Store" width="120" height="40"></a>
+            </div>
           </div>
           <div class="card" style="--accent:#9B5CF6">
-            <a href="https://apps.apple.com/us/app/id6784340038?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/cosmica.png" alt="" width="76" height="76" loading="lazy"></a>
-            <span class="card-body">
-              <a class="app-name" href="https://apps.apple.com/us/app/id6784340038?ct=afterhours_site"><strong>Cosmica: Idle Universe</strong></a>
-              <span class="tagline">An idle galaxy that plays itself.</span>
-              <span class="stores">
-                <a href="https://apps.apple.com/us/app/id6784340038?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Cosmica: Idle Universe on the App Store" width="120" height="40"></a>
+            <div class="card-top">
+              <a href="https://apps.apple.com/us/app/id6784340038?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/cosmica.png" alt="" width="76" height="76" loading="lazy"></a>
+              <span class="card-body">
+                <a class="app-name" href="https://apps.apple.com/us/app/id6784340038?ct=afterhours_site"><strong>Cosmica: Idle Universe</strong></a>
+                <span class="tagline">An idle galaxy that plays itself.</span>
               </span>
-            </span>
+            </div>
+            <div class="stores">
+              <a href="https://apps.apple.com/us/app/id6784340038?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Cosmica: Idle Universe on the App Store" width="120" height="40"></a>
+            </div>
           </div>
           <div class="card" style="--accent:#E0508A">
-            <a href="https://apps.apple.com/us/app/id6817339425?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/critter-conga.png" alt="" width="76" height="76" loading="lazy"></a>
-            <span class="card-body">
-              <a class="app-name" href="https://apps.apple.com/us/app/id6817339425?ct=afterhours_site"><strong>Critter Conga</strong></a>
-              <span class="tagline">Lead a conga line of rescued critters.</span>
-              <span class="stores">
-                <a href="https://apps.apple.com/us/app/id6817339425?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Critter Conga on the App Store" width="120" height="40"></a>
-                <a href="https://play.google.com/store/apps/details?id=com.compofelice.critterconga&referrer=utm_source%3Dafterhoursdevstudio"><img class="badge" src="googleplay-badge.png" alt="Get Critter Conga on Google Play" width="134" height="40"></a>
+            <div class="card-top">
+              <a href="https://apps.apple.com/us/app/id6817339425?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/critter-conga.png" alt="" width="76" height="76" loading="lazy"></a>
+              <span class="card-body">
+                <a class="app-name" href="https://apps.apple.com/us/app/id6817339425?ct=afterhours_site"><strong>Critter Conga</strong></a>
+                <span class="tagline">Lead a conga line of rescued critters.</span>
               </span>
-            </span>
+            </div>
+            <div class="stores">
+              <a href="https://apps.apple.com/us/app/id6817339425?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Critter Conga on the App Store" width="120" height="40"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.compofelice.critterconga&referrer=utm_source%3Dafterhoursdevstudio"><img class="badge" src="googleplay-badge.png" alt="Get Critter Conga on Google Play" width="134" height="40"></a>
+            </div>
           </div>
         </div>
       </div>
@@ -245,35 +259,41 @@
         <div class="group-head"><h3>Local guides</h3><p>For The Woodlands, Texas area.</p></div>
         <div class="cards">
           <div class="card" style="--accent:#6A5AE0">
-            <a href="https://apps.apple.com/us/app/id6773501518?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/stier-eats.png" alt="" width="76" height="76" loading="lazy"></a>
-            <span class="card-body">
-              <a class="app-name" href="https://apps.apple.com/us/app/id6773501518?ct=afterhours_site"><strong>S-Tier Eats</strong></a>
-              <span class="tagline">Restaurants around The Woodlands, ranked S to F.</span>
-              <span class="stores">
-                <a href="https://apps.apple.com/us/app/id6773501518?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download S-Tier Eats on the App Store" width="120" height="40"></a>
-                <a href="https://play.google.com/store/apps/details?id=com.compofelice.stiereats&referrer=utm_source%3Dafterhoursdevstudio"><img class="badge" src="googleplay-badge.png" alt="Get S-Tier Eats on Google Play" width="134" height="40"></a>
+            <div class="card-top">
+              <a href="https://apps.apple.com/us/app/id6773501518?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/stier-eats.png" alt="" width="76" height="76" loading="lazy"></a>
+              <span class="card-body">
+                <a class="app-name" href="https://apps.apple.com/us/app/id6773501518?ct=afterhours_site"><strong>S-Tier Eats</strong></a>
+                <span class="tagline">Restaurants around The Woodlands, ranked S to F.</span>
               </span>
-            </span>
+            </div>
+            <div class="stores">
+              <a href="https://apps.apple.com/us/app/id6773501518?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download S-Tier Eats on the App Store" width="120" height="40"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.compofelice.stiereats&referrer=utm_source%3Dafterhoursdevstudio"><img class="badge" src="googleplay-badge.png" alt="Get S-Tier Eats on Google Play" width="134" height="40"></a>
+            </div>
           </div>
           <div class="card" style="--accent:#2F6B45">
-            <a href="https://apps.apple.com/us/app/id6785576912?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/woodlands-trails.png" alt="" width="76" height="76" loading="lazy"></a>
-            <span class="card-body">
-              <a class="app-name" href="https://apps.apple.com/us/app/id6785576912?ct=afterhours_site"><strong>The Woodlands Trail Guide</strong></a>
-              <span class="tagline">Plan and navigate The Woodlands pathways.</span>
-              <span class="stores">
-                <a href="https://apps.apple.com/us/app/id6785576912?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download The Woodlands Trail Guide on the App Store" width="120" height="40"></a>
+            <div class="card-top">
+              <a href="https://apps.apple.com/us/app/id6785576912?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/woodlands-trails.png" alt="" width="76" height="76" loading="lazy"></a>
+              <span class="card-body">
+                <a class="app-name" href="https://apps.apple.com/us/app/id6785576912?ct=afterhours_site"><strong>The Woodlands Trail Guide</strong></a>
+                <span class="tagline">Plan and navigate The Woodlands pathways.</span>
               </span>
-            </span>
+            </div>
+            <div class="stores">
+              <a href="https://apps.apple.com/us/app/id6785576912?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download The Woodlands Trail Guide on the App Store" width="120" height="40"></a>
+            </div>
           </div>
           <div class="card" style="--accent:#1F6E78">
-            <a href="https://apps.apple.com/us/app/id6773332173?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/woodlands-fishing.png" alt="" width="76" height="76" loading="lazy"></a>
-            <span class="card-body">
-              <a class="app-name" href="https://apps.apple.com/us/app/id6773332173?ct=afterhours_site"><strong>The Woodlands Fishing Guide</strong></a>
-              <span class="tagline">81 fishing spots with live conditions.</span>
-              <span class="stores">
-                <a href="https://apps.apple.com/us/app/id6773332173?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download The Woodlands Fishing Guide on the App Store" width="120" height="40"></a>
+            <div class="card-top">
+              <a href="https://apps.apple.com/us/app/id6773332173?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/woodlands-fishing.png" alt="" width="76" height="76" loading="lazy"></a>
+              <span class="card-body">
+                <a class="app-name" href="https://apps.apple.com/us/app/id6773332173?ct=afterhours_site"><strong>The Woodlands Fishing Guide</strong></a>
+                <span class="tagline">81 fishing spots with live conditions.</span>
               </span>
-            </span>
+            </div>
+            <div class="stores">
+              <a href="https://apps.apple.com/us/app/id6773332173?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download The Woodlands Fishing Guide on the App Store" width="120" height="40"></a>
+            </div>
           </div>
         </div>
       </div>
@@ -281,14 +301,16 @@
         <div class="group-head"><h3>Tools</h3><p>Handy apps for work in the field.</p></div>
         <div class="cards">
           <div class="card" style="--accent:#8F7D75">
-            <a href="https://apps.apple.com/us/app/id6809621921?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/fiber-field-kit.png" alt="" width="76" height="76" loading="lazy"></a>
-            <span class="card-body">
-              <a class="app-name" href="https://apps.apple.com/us/app/id6809621921?ct=afterhours_site"><strong>Fiber Field Kit: Color Code</strong></a>
-              <span class="tagline">Offline fiber optic color codes and field reference.</span>
-              <span class="stores">
-                <a href="https://apps.apple.com/us/app/id6809621921?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Fiber Field Kit: Color Code on the App Store" width="120" height="40"></a>
+            <div class="card-top">
+              <a href="https://apps.apple.com/us/app/id6809621921?ct=afterhours_site" tabindex="-1" aria-hidden="true"><img class="app-icon" src="icons/fiber-field-kit.png" alt="" width="76" height="76" loading="lazy"></a>
+              <span class="card-body">
+                <a class="app-name" href="https://apps.apple.com/us/app/id6809621921?ct=afterhours_site"><strong>Fiber Field Kit: Color Code</strong></a>
+                <span class="tagline">Offline fiber optic color codes and field reference.</span>
               </span>
-            </span>
+            </div>
+            <div class="stores">
+              <a href="https://apps.apple.com/us/app/id6809621921?ct=afterhours_site"><img class="badge" src="appstore-badge.svg" alt="Download Fiber Field Kit: Color Code on the App Store" width="120" height="40"></a>
+            </div>
           </div>
         </div>
       </div>
